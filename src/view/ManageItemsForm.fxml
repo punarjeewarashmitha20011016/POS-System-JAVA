@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manageItemsPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="591.0" layoutX="-1.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="728.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c9d6ff" />
+                  <Stop color="#e2e2e2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="47.0" layoutX="42.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="646.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#a8abae" />
+                  <Stop color="#a89e9e" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXButton buttonType="RAISED" layoutX="543.0" layoutY="25.0" onAction="#btnGenerateItemCode" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #20bf55;" text="Generate Item Code" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="529.0" layoutY="25.0" text=":" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSetItemCode" alignment="CENTER" layoutX="482.0" layoutY="26.0" prefHeight="19.0" prefWidth="43.0" text="I-001" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="47.0" layoutY="75.0" prefHeight="3.0" prefWidth="636.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="445.0" layoutX="43.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="644.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c5cada" />
+                  <Stop color="#c9cfe1" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXTextField fx:id="txtItemCode" layoutX="259.0" layoutY="162.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="341.0" styleClass="txt">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="115.0" layoutY="172.0" text="Item Code">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="235.0" layoutY="173.0" text=":">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemDescription" layoutX="259.0" layoutY="205.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="341.0" styleClass="txt">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="115.0" layoutY="215.0" text="Item Description">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="235.0" layoutY="216.0" text=":">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemSize" layoutX="259.0" layoutY="248.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="341.0" styleClass="txt">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="115.0" layoutY="258.0" text="Item Size">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="235.0" layoutY="259.0" text=":">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemQuantity" layoutX="259.0" layoutY="290.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="341.0" styleClass="txt">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="115.0" layoutY="300.0" text="Item Quantity">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="235.0" layoutY="301.0" text=":">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemBuyingPrice" layoutX="259.0" layoutY="333.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="341.0" styleClass="txt">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="115.0" layoutY="342.0" text="Item Buying Price">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemUnitPrice" layoutX="259.0" layoutY="382.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="341.0" styleClass="txt">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="235.0" layoutY="343.0" text=":">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="addButtonId" buttonType="RAISED" layoutX="156.0" layoutY="471.0" onAction="#btnAddItem" prefHeight="34.0" prefWidth="108.0" style="-fx-background-color: #20bf55;" text="Add Item" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="303.0" layoutY="471.0" onAction="#btnUpdateItem" prefHeight="36.0" prefWidth="121.0" style="-fx-background-color: #20bf55;" text="Update Item" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="454.0" layoutY="471.0" onAction="#btnRemoveItem" prefHeight="36.0" prefWidth="121.0" style="-fx-background-color: #a40606;" text="Remove Item" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="115.0" layoutY="391.0" text="Item Unit Price">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="235.0" layoutY="392.0" text=":">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="594.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="594.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="723.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c9d6ff" />
+                  <Stop color="#e2e2e2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Separator layoutX="45.0" layoutY="86.0" prefHeight="3.0" prefWidth="636.0" />
+      <AnchorPane layoutX="47.0" layoutY="107.0" prefHeight="445.0" prefWidth="636.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="445.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="636.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#c5cada" />
+                        <Stop color="#c9cfe1" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <JFXTextField fx:id="txtCustomerId" layoutX="213.0" layoutY="65.0" onAction="#selectAllCustomerDetails" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="349.0" unFocusColor="BLACK">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="75.0" text="Customer Id">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="189.0" layoutY="76.0" text=":">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustomerName" layoutX="213.0" layoutY="108.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="349.0" unFocusColor="BLACK">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="118.0" text="Customer Name">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="189.0" layoutY="119.0" text=":">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustomerAddress" layoutX="213.0" layoutY="151.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="349.0" unFocusColor="BLACK">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="161.0" text="Customer Address">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="189.0" layoutY="162.0" text=":">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustomerNic" layoutX="213.0" layoutY="193.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="349.0" unFocusColor="BLACK">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="203.0" text="Customer Nic">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="189.0" layoutY="204.0" text=":">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustomerCity" layoutX="214.0" layoutY="234.0" onKeyReleased="#validateEvent" prefHeight="31.0" prefWidth="349.0" unFocusColor="BLACK">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" layoutX="190.0" layoutY="245.0" text=":">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="73.0" layoutY="244.0" text="Customer City">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="258.0" layoutY="338.0" onAction="#btnUpdateCustomer" prefHeight="36.0" prefWidth="121.0" style="-fx-background-color: #20bf55;" text="Update Customer" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="405.0" layoutY="338.0" onAction="#btnRemoveCustomer" prefHeight="36.0" prefWidth="121.0" style="-fx-background-color: #a40606;" text="Remove Customer" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="addCustomerBtnId" buttonType="RAISED" layoutX="110.0" layoutY="338.0" onAction="#btnAddCustomer" prefHeight="36.0" prefWidth="121.0" style="-fx-background-color: #20bf55;" text="Add Customer" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Separator layoutX="70.0" layoutY="299.0" prefHeight="3.0" prefWidth="493.0" />
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="47.0" layoutX="43.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="646.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#a8abae" />
+                  <Stop color="#a89e9e" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXButton buttonType="RAISED" layoutX="559.0" layoutY="31.0" onAction="#btnGenerateCustomerId" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #20bf55;" text="+ Customer Id" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="542.0" layoutY="34.0" text=":" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSetCustomerId" alignment="CENTER" layoutX="491.0" layoutY="35.0" prefHeight="19.0" prefWidth="43.0" text="C001" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

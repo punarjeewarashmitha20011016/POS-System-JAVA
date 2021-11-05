@@ -1,0 +1,6 @@
+.txt{
+    -fx-text-fill: white;
+}
+.promptText{
+    -fx-prompt-text-fill: white;
+}

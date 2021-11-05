@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="594.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewCustomerDetailsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="594.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="723.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c9d6ff" />
+                  <Stop color="#e2e2e2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Separator layoutX="47.0" layoutY="75.0" prefHeight="3.0" prefWidth="636.0" />
+      <TableView fx:id="tblCustomerDetailsVew" layoutX="47.0" layoutY="112.0" prefHeight="437.0" prefWidth="636.0" stylesheets="@css/TableView.css">
+         <columns>
+            <TableColumn fx:id="colCustomerId" prefWidth="98.0" text="Customer Id" />
+            <TableColumn fx:id="colCustomerName" prefWidth="165.0" text="Customer Name" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="113.0" text="Customer Address" />
+            <TableColumn fx:id="colCustomerNic" prefWidth="113.0" text="Customer Nic" />
+            <TableColumn fx:id="colCustomerCity" prefWidth="146.0" text="Customer City" />
+         </columns>
+      </TableView>
+      <Label layoutX="232.0" layoutY="33.0" prefHeight="27.0" prefWidth="102.0" text="CUSTOMER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="396.0" layoutY="33.0" text="DETAILS">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="44.0" fitWidth="47.0" layoutX="342.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/customerPng.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

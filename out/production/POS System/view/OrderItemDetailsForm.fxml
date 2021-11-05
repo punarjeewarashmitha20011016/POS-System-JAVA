@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="579.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderItemDetailsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="579.0" layoutX="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="728.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c9d6ff" />
+                  <Stop color="#e2e2e2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Separator layoutX="47.0" layoutY="56.0" prefHeight="3.0" prefWidth="636.0" />
+      <AnchorPane layoutX="44.0" layoutY="194.0" prefHeight="363.0" prefWidth="642.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="187.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="636.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#c9d6ff" />
+                        <Stop color="#e2e2e2" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <TableView fx:id="tblOrderDetailsView" layoutX="-3.0" layoutY="-120.0" prefHeight="491.0" prefWidth="642.0" stylesheets="@css/TableView.css">
+               <columns>
+                  <TableColumn fx:id="colItemCode" prefWidth="105.0" text="Item Code" />
+                  <TableColumn fx:id="colOrderId" prefWidth="105.0" text="Order Id" />
+                  <TableColumn fx:id="colOrderQty" prefWidth="152.0" text="Order Qty" />
+                  <TableColumn fx:id="colDiscount" prefWidth="157.0" text="Discount" />
+                  <TableColumn fx:id="colPrice" prefWidth="122.0" text="Price" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="290.0" layoutY="14.0" prefHeight="27.0" prefWidth="160.0" text="Order Item Details">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

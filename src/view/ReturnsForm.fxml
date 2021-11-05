@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="594.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="594.0" layoutX="-1.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="729.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c9d6ff" />
+                  <Stop color="#e2e2e2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <TableView fx:id="tblReturnItemView" layoutX="14.0" layoutY="376.0" prefHeight="210.0" prefWidth="700.0" stylesheets="@css/TableView.css">
+        <columns>
+          <TableColumn fx:id="tblReturnId" prefWidth="63.0" text="Return Id" />
+            <TableColumn fx:id="tblOrderId" prefWidth="72.0" text="Order Id" />
+            <TableColumn fx:id="tblCustomerId" prefWidth="79.0" text="Customer Id" />
+            <TableColumn fx:id="tblItemCode" prefWidth="74.0" text="Item Code" />
+            <TableColumn fx:id="tblItemDescription" prefWidth="137.0" text="Item Description" />
+            <TableColumn fx:id="tblReturnQty" prefWidth="66.0" text="Return Qty" />
+            <TableColumn fx:id="tblReturnReason" prefWidth="132.0" text="Return Reason" />
+            <TableColumn fx:id="tblTotal" prefWidth="76.0" text="Total" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutX="52.0" layoutY="216.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 60; -fx-arc-width: 60;" width="624.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c0c4c6" />
+                  <Stop color="#c1c4c6" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXTextField fx:id="txtReturnId" labelFloat="true" layoutX="67.0" layoutY="231.0" onKeyReleased="#returnKeyEvent" prefHeight="25.0" prefWidth="149.0" promptText="Return Id" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtReturnOrderId" labelFloat="true" layoutX="67.0" layoutY="274.0" onKeyReleased="#returnKeyEvent" prefHeight="25.0" prefWidth="149.0" promptText="Order Id" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtReturnCustomerId" labelFloat="true" layoutX="67.0" layoutY="321.0" onKeyReleased="#returnKeyEvent" prefHeight="25.0" prefWidth="149.0" promptText="Customer Id" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtReturnItemCode" labelFloat="true" layoutX="229.0" layoutY="231.0" onKeyReleased="#returnKeyEvent" prefHeight="25.0" prefWidth="149.0" promptText="Item Code" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtReturnItemDescription" labelFloat="true" layoutX="229.0" layoutY="274.0" onKeyReleased="#returnKeyEvent" prefHeight="25.0" prefWidth="149.0" promptText="Item Description" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtReturnQty" labelFloat="true" layoutX="229.0" layoutY="321.0" onKeyReleased="#returnKeyEvent" prefHeight="25.0" prefWidth="149.0" promptText="Return Qty" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtReturnReason" labelFloat="true" layoutX="390.0" layoutY="231.0" onKeyReleased="#returnKeyEvent" prefHeight="29.0" prefWidth="274.0" promptText="Return Reason" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtReturnItemPrice" labelFloat="true" layoutX="390.0" layoutY="274.0" onKeyReleased="#returnKeyEvent" prefHeight="29.0" prefWidth="274.0" promptText="Item Price" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="acceptReturnBtnId" layoutX="394.0" layoutY="318.0" onAction="#btnAcceptReturn" prefHeight="34.0" prefWidth="134.0" style="-fx-background-color: #28B463#28B463;" text="Accept Return" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="clearBtnId" layoutX="544.0" layoutY="318.0" onAction="#btnClear" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: grey;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtSearchOrderDetails" layoutX="59.0" layoutY="16.0" onKeyReleased="#searchOrderDetailsEvent" prefHeight="25.0" prefWidth="453.0" promptText="Search Order Details by Order Id">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="20.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/magnifying-glass.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutX="52.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 60; -fx-arc-width: 60;" width="624.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c0c4c6" />
+                  <Stop color="#c1c4c6" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXTextField fx:id="txtCustomerId" labelFloat="true" layoutX="92.0" layoutY="70.0" prefHeight="29.0" prefWidth="185.0" promptText="Customer Id" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtOrderDate" labelFloat="true" layoutX="92.0" layoutY="115.0" prefHeight="29.0" prefWidth="185.0" promptText="Order Date" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtOrderTime" labelFloat="true" layoutX="92.0" layoutY="160.0" prefHeight="29.0" prefWidth="185.0" promptText="Order Time" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtOrderPrice" labelFloat="true" layoutX="318.0" layoutY="70.0" prefHeight="29.0" prefWidth="185.0" promptText="Order Price" unFocusColor="#3700ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="312.0" layoutY="125.0" onAction="#btnViewOrderDetails" prefHeight="42.0" prefWidth="185.0" style="-fx-background-color: #28B463#28B463; -fx-background-radius: 50;" text="View Order Items" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

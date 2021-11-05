@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="594.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakeAnOrderFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="594.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="723.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c9d6ff" />
+                  <Stop color="#e2e2e2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Separator layoutX="28.0" layoutY="75.0" prefHeight="3.0" prefWidth="655.0" />
+      <Label layoutX="29.0" layoutY="33.0" prefHeight="27.0" prefWidth="81.0" text="Order ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="66.0" fitWidth="72.0" layoutX="344.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons8-add-shopping-cart-96.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cmbCustomerId" layoutX="27.0" layoutY="105.0" onAction="#comboCustomerId" prefHeight="25.0" prefWidth="102.0" promptText="Customer Id" />
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="158.0" layoutY="105.0" promptText="Customer Name" />
+      <JFXTextField fx:id="txtCustomerAddress" labelFloat="true" layoutX="309.0" layoutY="105.0" promptText="Customer Address" />
+      <JFXTextField fx:id="txtCustomerNic" labelFloat="true" layoutX="455.0" layoutY="105.0" promptText="Customer Nic" />
+      <JFXTextField fx:id="txtCustomerCity" labelFloat="true" layoutX="601.0" layoutY="105.0" prefHeight="25.0" prefWidth="81.0" promptText="Customer City" />
+      <JFXComboBox fx:id="cmbItemCode" layoutX="27.0" layoutY="149.0" onAction="#comboItemCode" prefHeight="25.0" prefWidth="102.0" promptText="Item Code" />
+      <JFXTextField fx:id="txtItemDescription" labelFloat="true" layoutX="158.0" layoutY="149.0" promptText="Item Description" />
+      <JFXTextField fx:id="txtItemSize" labelFloat="true" layoutX="309.0" layoutY="149.0" prefHeight="25.0" prefWidth="72.0" promptText="Item Size" />
+      <JFXTextField fx:id="txtItemQty" labelFloat="true" layoutX="401.0" layoutY="149.0" prefHeight="25.0" prefWidth="72.0" promptText="Item Qty" />
+      <JFXTextField fx:id="txtItemUnitPrice" labelFloat="true" layoutX="491.0" layoutY="149.0" prefHeight="25.0" prefWidth="102.0" promptText="Unit Price" />
+      <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="601.0" layoutY="149.0" onKeyReleased="#qtyEvent" prefHeight="25.0" prefWidth="81.0" promptText="Qty On Hand" />
+      <JFXButton fx:id="addToCartId" buttonType="RAISED" layoutX="575.0" layoutY="197.0" onAction="#btnAddToCart" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #20bf55;" text="Add To Cart">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="clearCartId" buttonType="RAISED" layoutX="455.0" layoutY="197.0" onAction="#btnClear" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #d2ccc4;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblAddToCart" layoutX="29.0" layoutY="247.0" prefHeight="278.0" prefWidth="655.0" stylesheets="@css/TableView.css">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="75.0" text="Item Code" />
+            <TableColumn fx:id="colItemDescription" prefWidth="132.0" text="Item Description" />
+            <TableColumn fx:id="colQty" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="128.0" text="Unit Price" />
+            <TableColumn fx:id="colDiscountPrice" prefWidth="128.0" text="Discount" />
+            <TableColumn fx:id="colTotalAmount" prefWidth="111.0" text="Total Amount" />
+        </columns>
+      </TableView>
+      <Label layoutX="110.0" layoutY="31.0" prefHeight="27.0" prefWidth="6.0" text=":">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lblSetOrderId" layoutX="122.0" layoutY="33.0" prefHeight="27.0" prefWidth="81.0" text="O-001">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton fx:id="placeOrderId" buttonType="RAISED" layoutX="575.0" layoutY="540.0" onAction="#btnPlaceOrder" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #20bf55;" text="Place Order">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="418.0" layoutY="539.0" prefHeight="27.0" prefWidth="44.0" text="Total">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="468.0" layoutY="539.0" prefHeight="27.0" prefWidth="6.0" text=":">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lblTotalAmount" layoutX="483.0" layoutY="539.0" prefHeight="27.0" prefWidth="91.0" text="0.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXTextField fx:id="txtAddDiscount" labelFloat="true" layoutX="29.0" layoutY="197.0" onKeyReleased="#discountEvent" prefHeight="25.0" prefWidth="102.0" promptText="Add Discount %" />
+      <Label layoutX="230.0" layoutY="539.0" prefHeight="27.0" prefWidth="81.0" text="Discount  :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lblDiscountAmount" layoutX="311.0" layoutY="539.0" prefHeight="27.0" prefWidth="91.0" text="0.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="45.0" layoutY="538.0" prefHeight="27.0" prefWidth="81.0" text="Sub Total :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lblSubTotal" layoutX="126.0" layoutY="538.0" prefHeight="27.0" prefWidth="91.0" text="0.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ae5858" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

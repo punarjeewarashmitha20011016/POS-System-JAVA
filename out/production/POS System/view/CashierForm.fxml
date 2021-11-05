@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="cashierFormPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="610.0" prefWidth="922.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashierFormController">
+   <left>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="588.0" layoutX="-2.0" layoutY="-10.0" strokeType="INSIDE" strokeWidth="0.0" width="201.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#fc466b" offset="0.007662835249042145" />
+                        <Stop color="#7246fa" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#fc466b" offset="0.007662835249042145" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <JFXButton buttonType="RAISED" layoutY="32.0" onAction="#btnAddNewCustomer" opacity="0.62" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #642B73;" text="Add New Customer" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#642b73" offset="0.007662835249042145" />
+                        <Stop color="#c6426e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutY="160.0" onAction="#btnViewItemDetails" opacity="0.62" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #642B73;" text="View Item Details" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#642b73" offset="0.007662835249042145" />
+                        <Stop color="#c6426e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Separator layoutX="7.0" layoutY="-2.0" prefHeight="6.0" prefWidth="179.0" />
+            <JFXButton buttonType="RAISED" layoutY="224.0" onAction="#btnMakeAnOrder" opacity="0.62" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #642B73;" text="Make an Order" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#642b73" offset="0.007662835249042145" />
+                        <Stop color="#c6426e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="6.0" layoutY="522.0" onAction="#btnLogout" opacity="0.62" prefHeight="42.0" prefWidth="185.0" style="-fx-background-color: #642B73; -fx-background-radius: 50;" text="Logout" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#642b73" offset="0.007662835249042145" />
+                        <Stop color="#c6426e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutY="96.0" onAction="#btnViewCustomerDetails" opacity="0.62" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #642B73;" text="View Customer Details" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#642b73" offset="0.007662835249042145" />
+                        <Stop color="#c6426e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutY="288.0" onAction="#btnViewOrderDetails" opacity="0.62" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #642B73;" text="View Order Details" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#642b73" offset="0.007662835249042145" />
+                        <Stop color="#c6426e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <VBox layoutX="30.0" layoutY="419.0" prefHeight="88.0" prefWidth="134.0">
+               <children>
+                  <AnchorPane>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fx:id="imgWheel2" fitHeight="41.0" fitWidth="34.0" layoutX="45.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/cog-wheel-silhouette.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgWheel1" fitHeight="64.0" fitWidth="58.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/gear2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <JFXButton buttonType="RAISED" layoutX="-1.0" layoutY="353.0" onAction="#btnReturns" opacity="0.62" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #642B73;" text="Returns" textFill="WHITE">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#642b73" offset="0.007662835249042145" />
+                        <Stop color="#c6426e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="cashierChildPane" prefHeight="594.0" prefWidth="723.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="594.0" layoutY="-16.0" strokeType="INSIDE" strokeWidth="0.0" width="723.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#f5e6e9" offset="0.007662835249042145" />
+                        <Stop color="#8a7bbc" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#fc466b" offset="0.007662835249042145" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <ImageView fitHeight="387.0" fitWidth="424.0" layoutX="167.0" layoutY="96.0" opacity="0.29" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/clerk.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="55.0" prefWidth="726.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="62.0" layoutX="-6.0" layoutY="-5.0" strokeType="INSIDE" strokeWidth="0.0" width="928.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fa484c" />
+                        <Stop color="#d046fa" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fc5c7d" />
+                        <Stop color="#fc466b" offset="0.007662835249042145" />
+                        <Stop color="#3f5efb" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <Label fx:id="lblSetName" alignment="CENTER" contentDisplay="CENTER" layoutX="758.0" layoutY="15.0" prefHeight="24.0" prefWidth="126.0" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="20.0" prefHeight="24.0" prefWidth="144.0" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Separator layoutX="8.0" layoutY="5.0" prefHeight="6.0" prefWidth="179.0" />
+            <Separator layoutX="183.0" layoutY="9.0" orientation="VERTICAL" prefHeight="46.0" prefWidth="6.0" />
+            <Separator layoutX="7.0" layoutY="9.0" orientation="VERTICAL" prefHeight="47.0" prefWidth="6.0" />
+            <Label layoutX="456.0" layoutY="10.0" prefHeight="38.0" prefWidth="183.0" text="Sell Super Mart">
+               <font>
+                  <Font name="Gill Sans MT Bold" size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#fffdff" />
+                        <Stop color="#eecdff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <ImageView fx:id="imgNotification" fitHeight="32.0" fitWidth="39.0" layoutX="881.0" layoutY="11.0" onMouseClicked="#showNotifications" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/notification.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Circle fx:id="circle" fill="WHITE" layoutX="903.0" layoutY="19.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="lblNotificationCount" layoutX="900.0" layoutY="10.0" text="0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

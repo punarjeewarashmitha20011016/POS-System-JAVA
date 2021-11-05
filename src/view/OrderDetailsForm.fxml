@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="594.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderDetailsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="594.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="723.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c9d6ff" />
+                  <Stop color="#e2e2e2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Separator layoutX="47.0" layoutY="116.0" prefHeight="3.0" prefWidth="636.0" />
+      <AnchorPane layoutX="49.0" layoutY="132.0" prefHeight="413.0" prefWidth="642.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="421.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="636.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#c9d6ff" />
+                        <Stop color="#e2e2e2" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <TableView fx:id="tblOrderView" prefHeight="421.0" prefWidth="642.0" stylesheets="@css/TableView.css">
+              <columns>
+                <TableColumn fx:id="colOrderId" prefWidth="105.0" text="Order Id" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="105.0" text="Customer Id" />
+                  <TableColumn fx:id="colOrderDate" prefWidth="152.0" text="Order Date" />
+                  <TableColumn fx:id="colOrderTime" prefWidth="157.0" text="Order Time" />
+                  <TableColumn fx:id="colOrderCost" prefWidth="122.0" text="Order Cost" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtSearchOrderDetails" labelFloat="true" layoutX="47.0" layoutY="26.0" prefHeight="25.0" prefWidth="396.0" promptText="Search Order Details" />
+      <JFXButton buttonType="RAISED" layoutX="458.0" layoutY="26.0" onAction="#searchOrderDetails" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #add100;" text="Search Order Details">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#fdfc47" />
+                  <Stop color="#24fe41" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
+   </children>
+</AnchorPane>
